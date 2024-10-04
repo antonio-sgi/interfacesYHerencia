@@ -1,11 +1,21 @@
 package com.example;
 
-public class MountainBike implements Bicicletas {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
-    private String marca;
-    private int asientos;
-    private int engranajes;
-    private double velocidad;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@SuperBuilder
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+
+
+public class MountainBike extends Bicicleta implements Bicicletas {
 
     private String grosorNeumatico;
 
@@ -20,4 +30,8 @@ public class MountainBike implements Bicicletas {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'acelerar'");
     }
+
+
 }
+
+

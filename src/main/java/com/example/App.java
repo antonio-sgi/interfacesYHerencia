@@ -52,5 +52,42 @@ public class App {
         // Intento crear un objeto de tipo Persona, siendo abstracta
         // NO es posible
         // Persona persona = new Persona();
+
+        /**
+        * Ejercicio # 1.
+        * 
+        * Crear una rama y llamarle "solucion-ejercicio-1"
+        * 
+        * Crear una clase Bicicleta, abstracta, que contenga todas las propiedades 
+        * que son comunes a todos las bicicletas
+        * 
+        * Hacer que las bicis de montaña y electrica hereden de la clase Bicicleta
+        * 
+        * Crear objetos de tipo bici de Montaña y Electrica e imprimirlos por la 
+        * consola
+        *
+        */
+
+        MountainBike bicimontana = MountainBike.builder()
+            .marca("aaa")
+            .asientos(1)
+            .engranajes(5)
+            .velocidad(40)
+            .grosorNeumatico("mucho")
+            .build();
+        System.out.println("bici montaña: " + bicimontana);
+
+
+        ElectricalBike bicielectrica = ElectricalBike.builder()
+            .marca("bbb")
+            .asientos(2)
+            .engranajes(75)
+            .velocidad(20)
+            .autonomia(Autonomia.ALTA)
+            .build();
+        System.out.println("bici electrica: " + bicielectrica);
+
     }
+
+
 }

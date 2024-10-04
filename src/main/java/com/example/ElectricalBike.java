@@ -1,23 +1,33 @@
 package com.example;
 
-public class ElectricalBike implements Bicicletas {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
-    private String marca;
-    private int asientos;
-    private int engranajes;
-    private double velocidad;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@SuperBuilder
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 
-    private Autonomia autonomia;
+public class ElectricalBike extends Bicicleta implements Bicicletas {
 
-    @Override
-    public void frenar(double velocidad) {
+
+     private Autonomia autonomia;
+ 
+     @Override
+     public void frenar(double velocidad) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'frenar'");
-    }
-
-    @Override
-    public void acelerar(double velocidad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'acelerar'");
-    }
-}
+     }
+ 
+     @Override
+     public void acelerar(double velocidad) {
+         // TODO Auto-generated method stub
+         throw new UnsupportedOperationException("Unimplemented method 'acelerar'");
+     }
+ }
